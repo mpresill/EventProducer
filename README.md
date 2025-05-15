@@ -82,6 +82,10 @@ python bin/run.py --FCC --LHE --send --condor --typelhe mg -p mg_pp_hh_test --mg
 
 The options ```--ncpus``` and ```--priority``` can also be specified to increase the numbers of cpus on the cluster and to change the priority queue. 
 
+Test from Matteo:
+```
+python3 bin/run.py --FCCee --LHE --send --condor --typelhe mg -p mg_ee_zh_ecm240 --mg5card mg5/examples/mg_ee_zh.mg5 -N 1 -n 1 -q workday
+```
 
 
 Generate FCCSW files from the LHE and decay with Pyhtia8

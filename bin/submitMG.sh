@@ -3,7 +3,9 @@ unset LD_LIBRARY_PATH
 unset PYTHONHOME
 unset PYTHONPATH
 
-source /cvmfs/sft.cern.ch/lcg/views/LCG_89/x86_64-centos7-gcc7-opt/setup.sh 
+#source /cvmfs/sft.cern.ch/lcg/views/LCG_89/x86_64-centos7-gcc7-opt/setup.sh 
+#source /cvmfs/sw.hsf.org/key4hep/setup.sh
+source /cvmfs/sft.cern.ch/lcg/views/LCG_105/x86_64-el9-gcc11-opt/setup.sh
 export LHAPDF_DATA_PATH=/afs/cern.ch/work/b/bistapf/lhapdf/LHAPDF-6.1.6/install/share/LHAPDF/
 
 SCRIPTFILE=${1}
@@ -18,12 +20,13 @@ mkdir job
 cd job
 
 echo "copying madgraph tarball ..."
-cp  /eos/experiment/fcc/hh/utils/generators/MG5_aMC_v2.5.5.tar.gz .
+#cp  /eos/experiment/fcc/hh/utils/generators/MG5_aMC_v2.5.5.tar.gz .
+cp  /eos/user/m/mpresill/FCC/MG5_aMC_v3.5.8.tar .
 
-tar -xzf MG5_aMC_v2.5.5.tar.gz
+tar -xf MG5_aMC_v3.5.8.tar
 
 echo "finished untaring ..."
-cd MG5_aMC_v2_5_5
+cd MG5_aMC_v3_5_8
 
 # parse script file
 cp ${SCRIPTFILE} .
@@ -76,5 +79,7 @@ OUTFILE=${OUTDIR}/events_${JOBID}.lhe.gz
 echo "Copying LHE file to ${OUTFILE}"
 mkdir -p ${OUTDIR}
 
-source /cvmfs/sft.cern.ch/lcg/views/LCG_96/x86_64-centos7-gcc8-opt/setup.sh
+#source /cvmfs/sft.cern.ch/lcg/views/LCG_96/x86_64-centos7-gcc8-opt/setup.sh
+#source /cvmfs/sw.hsf.org/key4hep/setup.sh
+source /cvmfs/sft.cern.ch/lcg/views/LCG_105/x86_64-el9-gcc11-opt/setup.sh
 xrdcp -N -v DUMMYPROCESS/Events/run_01/unweighted_events.lhe.gz root://eospublic.cern.ch/${OUTDIR}/events_${JOBID}.lhe.gz

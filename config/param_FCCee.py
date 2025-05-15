@@ -5,10 +5,10 @@ eostest = '/eos/experiment/fcc/hh/tests/testfile.lhe.gz'
 eostest_size = 1312594
 
 # directories
-webbasedir = "/eos/experiment/fcc/www/data/FCCee/"
-pubbasedir = "/afs/cern.ch/work/f/fccsw/public/FCCDicts/"
+webbasedir = "/eos/user/m/mpresill/www/FCC/FCCee/"              ####edited
+pubbasedir = "/afs/cern.ch/work/m/mpresill/FCC/FCCDicts/"       ####edited
 eosbaseinputdir = "/eos/experiment/fcc/ee/generation/"
-eosbaseoutputdir = "/eos/experiment/fcc/ee/generation/"
+eosbaseoutputdir = "/eos/experiment/fcc/ee/analyses_storage/Higgs_and_TOP/HiggsTauTau/ecm240/MCgenCP/" #using the folder to which I was granted access ####edited
 
 # stat
 lhe_stat = webbasedir + "statlhe.html"
