@@ -1,0 +1,24 @@
+import model ./SMEFTsim_topU3l_MwScheme_UFO__taudecay_UFO
+
+define lep = e+ e- mu+ mu- ta+ ta-
+define nu = vl vl~ 
+
+generate e+ e- > e+ e- h,      ( h > ta+ ta-, ta+ > pi+ pi0 vt~, ta- > pi- pi0 vt ) QCD=0 NP=0 NPprop=0 SMHLOOP=0 
+
+output DUMMYPROCESS
+
+######## DELIMITER (!!! NEED THIS LINE !!!) ##################
+
+launch DUMMYPROCESS
+set iseed DUMMYSEED
+set nevents DUMMYNEVENTS
+
+set lpp1 0
+set lpp2 0
+set ebeam1 120
+set ebeam2 120
+set ptl 0 
+set etal -1
+set drll -1 
+
+set use_syst False

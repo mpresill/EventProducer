@@ -433,6 +433,8 @@ branching_ratios = {
 ## description/comment/matching parameters/cross section/kfactor/matching efficiency
 
 gridpacklist = {
+    # added on May 15, 2025 by Matteo:
+    'mg_ee_eetata_ecm240':['e+e- -> e+e-H, H -> ta+ ta-', '', '', '1.0', '1.0', '1.0'],
     'dummy': ['NOT REGISTERED IN param_FCCee',
               'NOT REGISTERED IN param_FCCee', '',
               '-9999', '-9999', '-9999'],
