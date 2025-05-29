@@ -1,0 +1,21 @@
+Universe = vanilla
+Executable = wrapper.sh
+
+#Error = $(ClusterId)_$(Process).err
+#Output = $(ClusterId)_$(Process).out
+#Log = $(ClusterId)_$(Process).log
+
+Arguments = $(ClusterId) $(Process)
+
+use_x509userproxy = true
++JobFlavour = "nextweek"
+request_cpus = 1
++AccountingGroup = "group_u_FCC.local_gen"
+
+should_transfer_files = YES
+
+transfer_input_files = wrapper.sh, pythia_proc.cmd, /afs/cern.ch/work/m/mpresill/FCC/EventProducer/DelphesPythia/card_IDEA.tcl, /afs/cern.ch/work/m/mpresill/FCC/EventProducer/DelphesPythia/edm4hep_IDEA.tcl
+
+when_to_transfer_output = ON_EXIT
+
+Queue 1
